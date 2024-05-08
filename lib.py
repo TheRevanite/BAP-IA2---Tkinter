@@ -14,40 +14,28 @@ def fetch_from_database(ha_sh):
     sql.commit()
     for row in cursor:
         if ha_sh==row[1]:
-            print(f"Detected ALGORITHM (md5): {ha_sh}\nPassword: {row[1]}")
             return True
         if ha_sh==row[2]:
-            print(f"Detected ALGORITHM (sha1): {ha_sh}\nPassword: {row[1]}")
             return True
         if ha_sh==row[3]:
-            print(f"Detected ALGORITHM (sha224): {ha_sh}\nPassword: {row[1]}")
             return True
         if ha_sh==row[4]:
-            print(f"Detected ALGORITHM (blake2s): {ha_sh}\nPassword: {row[1]}")
             return True
         if ha_sh==row[5]:
-            print(f"Detected ALGORITHM (blake2b): {ha_sh}\nPassword: {row[1]}")
             return True
         if ha_sh==row[6]:
-            print(f"Detected ALGORITHM (sha3_384): {ha_sh}\nPassword: {row[1]}")
             return True
         if ha_sh==row[7]:
-            print(f"Detected ALGORITHM (sha384): {ha_sh}\nPassword: {row[1]}")
             return True
         if ha_sh==row[8]:
-            print(f"Detected ALGORITHM (sha3_512): {ha_sh}\nPassword: {row[1]}")
             return True
         if ha_sh==row[9]:
-            print(f"Detected ALGORITHM (sha3_224): {ha_sh}\nPassword: {row[1]}")
             return True
         if ha_sh==row[10]:
-            print(f"Detected ALGORITHM (sha512): {ha_sh}\nPassword: {row[1]}")
             return True
         if ha_sh==row[11]:
-            print(f"Detected ALGORITHM (sha256): {ha_sh}\nPassword: {row[1]}")
             return True
         if ha_sh==row[12]:
-            print(f"Detected ALGORITHM (sha3_256): {ha_sh}\nPassword: {row[1]}")
             return True
     else:
         return False
